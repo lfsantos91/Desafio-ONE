@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #03346E;
+    --cor-secundaria: #6EACDA;
+    --cor-terciaria: #021526;
+    --cor-hover: #E2E2B6;
+    --cor-saida: #E2E2B6;
+
+    --fonte-primaria: "Playfair Display", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+}
+
+.tela_principal {
+    display: flex;
+    justify-content: center;
+}
+
+.tela {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.cabecalho {
+    padding: 2.5% 2% 0% 2%;
+}
+
+.alerta {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+    width: 66%;
+    padding-left: 22%;
+    height: 30px;
+}
+
+.tela_texto {
+    display: flex;
+    flex: wrap;
+    border: 0 none;
+    outline: 0;
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    width: 66%;
+    height: 20vh;
+    padding-left: 22%;
+    padding-bottom: 30%;
+    background-color: #ffffff00;
+}
+
+.principal_texto {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.tela_botao:active,
+.tela_botao_copiar {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+}
+
+.tela_botao,
+.tela_botao_copiar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 24px;
+    color: var(--cor-primaria);
+    background-color: var(#ffffff00);
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 328px;
+    height: 67px;
+    gap: 24px;
+}
+
+.tela_botao_copiar {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-saida);
+    font-weight: 400;
+}
+
+*[id=criptografar] {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.tela_botao_copiar {
+    margin-top: 63%;
+    display: none;
+}
+
+.tela_saida {
+    color: var(--cor-saida);
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+    outline: none;
+}
+
+.tela_saida1 {
+    color: var(--cor-saida);
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+}
+
+.tela_esquerda {
+    display: flex;
+    flex-wrap: wrap;
+    height: 67px;
+    width: 66%;
+    padding-left: 22%;
+    gap: 24px;
+    row-gap: 24px;
+}
+
+.tela_direita {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+    background: var(--cor-secundaria);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+*[id=resultado] {
+    width: 339px;
+    height: 401px;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    background-color: #6EACDA;
+    font-size: 24px;
+    font-weight: 400;
+    outline: none;
+    display: none;
+    align-items: center;
+}
+
+.final {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    width: auto;
+    height: 67px;
+}
+
+@media screen and (max-width:1250px) {
+
+    .tela_botao {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:1024px),
+(min-width:600) {
+
+    .tela_principal {
+        flex-direction: column;
+    }
+
+    .tela_esquerda {
+        width: 100%;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .tela {
+        gap: 10px;
+    }
+
+    .tela_texto {
+        height: 50vh;
+        padding-left: 10%;
+        padding-bottom: 0;
+    }
+
+    .tela_direita {
+        margin-top: 5%;
+        width: auto;
+        height: 133px;
+    }
+
+    .imagem_tela {
+        display: none;
+    }
+
+    .tela_botao_copiar {
+        margin-top: 0;
+        display: none;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .tela_texto {
+        width: 100%;
+    }
+
+    .tela_esquerda {
+        max-width: 680px;
+        height: auto;
+    }
+
+    *[id=resultado] {
+        width: auto;
+        height: auto;
+    }
+
+    .tela_direita {
+        width: 343px;
+        height: 595px;
+    }
+
+    .alerta {
+        padding-left: 5%;
+    }
+}
+
+/* Esta seção de 'medias' faz ajustes para atender requisitos de design*/
+@media screen and (max-width:780px) {
+    .alerta {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .alerta {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width:930px) {
+    .alerta {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width:586px) {
+    .cabecalho {
+        padding: 5% 2% 0% 2%;
+    }
+
+    .apresentacao__esquerda {
+        height: auto;
+    }
+
+    .apresentacao {
+        gap: 10px;
+    }
+
+    .tela_direita {
+        width: 327px;
+        height: 186px;
+        margin-left: 10%;
+    }
+
+    .tela_botao {
+        width: 250px;
+        height: 67px;
+    }
+
+    .tela_botao_copiar {
+        margin-top: 0;
+        display: none;
+        width: 250px;
+    }
+
+    .alerta {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .tela_esquerda {
+        height: auto;
+    }
+
+    .tela {
+        gap: 10px;
+    }
+
+    .tela_direita {
+        width: 327px;
+        height: 186px;
+        margin-left: 7%;
+    }
+
+    .tela_botao {
+        width: 250px;
+        height: 67px;
+    }
+
+    .alerta {
+        padding-left: 10%;
+    }
+}

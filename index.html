@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Decodificador de Texto</title>
+
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="./assets/Frame 6.svg" alt="logo da alura">
+
+
+    </header>
+
+    <main>
+        <div class="tela_principal">
+        <div class="tela">
+
+            <input class="tela_texto" id="texto-principal" type="text" placeholder="Digite o seu texto">
+            <div class="alerta">
+                <img src="./assets/Group.png" width="16px" height="16px" alt="sinal de exclamacao">
+                <p class="principal_texto">apenas letras minusculas e sem acentuacao</p>
+            </div>
+            <div class="tela_esquerda">
+                <div>
+                    <button onclick="esconder('conteudo')" id="criptografar" class="tela_botao">Criptografar</button>
+                </div>
+                <div>
+                    <button onclick="esconder('conteudo')" id="descriptografar" class="tela_botao">Descriptografar</button>
+                </div>
+
+            </div>
+        </div>
+            <div class="tela_direita" >
+                <textarea name="" id="resultado"></textarea>
+            <div id="conteudo">
+                <img class="imagem_tela" src="./assets/High quality products 1 1.svg">
+                <p class="tela_saida"> Nenhuma mensagem <br> encontrado</p> <br>
+                <div class="tela_saida1"> Digite um texto que deseja <br> criptografar ou descriptografar.</div>
+            </div>
+                <button onclick="" id="btn_copiar" class="tela_botao_copiar">Copiar</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="final">
+        <p>Desenvolvido por Luis Felipe</p>
+    </footer>
+
+</body>
+    <script src="app.js" defer></script>
+</html>
